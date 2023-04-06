@@ -1,0 +1,49 @@
+<mvc:View controllerName="stk.starterkit.controller.CustomersList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Shell id="shell">
+    <App id="app">
+    <pages>
+    <Page id="page" title="{Title}">
+    	<customHeader>
+		<Toolbar id="toolbar">
+		      <Title id="title" text="{i18n>title}"/>
+                  <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+			<Button id = "button1" text="Add new customer" press="onPress" class="sapUiMediumMarginBegin" />
+                  <Button id="button2" text="Performance" press="onPerformance" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom">
+                        </Button>
+            </Toolbar>
+      </customHeader>
+        <content>
+         <Carousel id="_IDGenCarousel1" height="25%" loop="true">
+           
+             <Image id="_IDGenImage1" width="90%" height="90%" src="https://www.drupal.org/files/Capgemini_Logo_2COL_RGB.png"/>
+             <Image id="_IDGenImage2" width="90%" height="90%" src="https://martechseries.com/wp-content/uploads/2022/11/Capgemini-acquires-23red-to-boost-its-sustainability-and-purpose-driven-creative-brand-design-capabilities-in-the-UK.jpg"/>
+         
+          <customLayout>
+          <CarouselLayout id="_IDGenCarouselLayout1" visiblePagesCount="2"/>
+          </customLayout>
+          </Carousel>
+
+          <Table 	alternateRowColors="true" id="_IDGenTable1" items ="{/Customers}">
+          <columns>
+          <Column id="_IDGenColumn1" >
+                <Label id="_IDGenLabel1" text="{i18n>companyName}"/>
+          </Column>
+         <Column id="_IDGenColumn2" >
+                <Label id="_IDGenLabel2" text="{i18n>country}"/>
+          </Column>
+          </columns>
+          <items>
+          <ColumnListItem id="_IDGenColumnListItem1" type="Navigation" press="onCustomerPress">
+          <Text id="_IDGenText1" text="{CompanyName}"/>
+          <Text id="_IDGenText2" text="{Country}"/>
+          </ColumnListItem>
+          </items>
+          </Table>
+         </content>
+    </Page>
+    </pages>
+    </App>
+    </Shell>
+</mvc:View>

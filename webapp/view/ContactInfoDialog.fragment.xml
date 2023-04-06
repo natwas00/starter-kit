@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m"  xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <Dialog id="contactDialog"  title="{i18n>Contact Information}">
+    		<VBox>
+			<f:SimpleForm >
+    		<f:content>
+    				<Label text="{i18n>Name}"/>
+    				<Text text="{ContactName}"/>
+    				<Label text="{i18n>Contact Title}"/>
+    				<Text text="{ContactTitle}"/>
+    				<Label text="{i18n>Address}"/>
+    				<Text text="{Address}"/>
+    				<Label text="{i18n>Phone}"/>
+    				<Text text="{Phone}"/>
+    		</f:content>
+            </f:SimpleForm>
+		</VBox>
+    	<beginButton>
+        <Button type="Reject" press=".onCloseDialog" text="Close">
+     
+        </Button>
+    	</beginButton>
+    </Dialog>
+</core:FragmentDefinition>

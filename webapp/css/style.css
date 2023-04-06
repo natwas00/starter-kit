@@ -1,0 +1,18 @@
+/* Enter your custom styles here */
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .relative {
+    position: relative;
+   
+  } 
+
+  .absolute {
+    position: absolute;
+   
+  } 
+  .element {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }

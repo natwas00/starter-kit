@@ -1,0 +1,77 @@
+<mvc:View 
+    xmlns="sap.m"
+    controllerName="stk.starterkit.controller.CreateCustomer"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+		<VBox class="sapUiSmallMargin"  alignItems="Stretch" >
+		<f:Form id="FormChange354"
+			editable="true" >
+			<f:title>
+				<core:Title text="Create Customer" />
+			</f:title>
+
+            
+           
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="3"
+					labelSpanL="3"
+					labelSpanM="3"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="4"
+					emptySpanL="4"
+					emptySpanM="4"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements  >
+						<f:FormElement label="Customer ID" >
+							<f:fields>
+								<Input width="50%" id="CustomerID" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Customer Name">
+							<f:fields>
+								<Input width="50%" id="CustomerName"  />
+								
+							</f:fields>
+                            
+						</f:FormElement>
+                        <f:FormElement label="" >
+							<f:fields>
+								
+
+    <Button  type="Accept"
+			text="Create"
+			press="onPress"
+            width="30%"
+           
+            class="sapUiLargeMarginBeginEnd sapUiSmallMarginTop"
+			ariaDescribedBy="acceptButtonDescription genericButtonDescription">
+				
+	</Button>
+							
+							</f:fields>
+                            
+						</f:FormElement>
+                      
+              
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+         
+		</f:Form>
+    
+	</VBox>
+
+  
+         	
+</mvc:View>
