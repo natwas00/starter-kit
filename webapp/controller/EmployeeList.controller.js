@@ -26,6 +26,19 @@ sap.ui.define([
 
                 var oSource = oEvent.getSource();
 
+                MessageToast.show("success");
+                var oEmployee = oSource.getBindingContext().getObject();
+                var sEmail = oEmployee.FirstName + "." + oEmployee.LastName + "abctest.com";
+                var sSubject = "Good job!";
+                var sBody = "You are doing well, thank you!";
+                sap.m.URLHelper.triggerEmail(sEmail, sSubject, sBody);
+                    
+               
+            },
+            onFire: function (oEvent) {
+
+                var oSource = oEvent.getSource();
+
                 $.ajax({
                     url: "/generate_insult.php",
                     data: {
@@ -34,11 +47,11 @@ sap.ui.define([
                     },
 
                     success: function (oResponse) {
-                             MessageToast.show("success");
+                        MessageToast.show("Failure");
                         var oEmployee = oSource.getBindingContext().getObject();
-                        var sEmail = oEmployee.FirstName + "." + oEmployee.LastName + "@aniatest.com";
-                        var sSubject = "Good job!";
-                        var sBody = oResponse.insult;
+                        var sEmail = oEmployee.FirstName + "." + oEmployee.LastName + "abctest.com";
+                        var sSubject = "Awful job!";
+                        var sBody =  oResponse.insult;
                         sap.m.URLHelper.triggerEmail(sEmail, sSubject, sBody);
                     }
                 })
